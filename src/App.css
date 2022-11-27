@@ -1,0 +1,17 @@
+html, body, #root, .App, #content{
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0rem 1rem;
+  margin: 0rem;
+}
+
+.header-button {
+  padding: 1rem 3rem;
+}
