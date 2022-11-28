@@ -1,7 +1,8 @@
-html, body, #root, .App, #content{
+html, body, #root, .App, #content, #starter-screen {
   margin: 0;
   padding: 0;
   height: 100vh;
+  background-color: rgb(72, 72, 72)
 }
 
 #header {
@@ -10,8 +11,58 @@ html, body, #root, .App, #content{
   align-items: center;
   padding: 0rem 1rem;
   margin: 0rem;
+  border-bottom: 5px solid rgb(24, 121, 195);
+  color: rgb(24, 121, 195);
+}
+
+#starter-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .header-button {
-  padding: 1rem 3rem;
+  padding: 0.1rem 3rem;
+  background-color: rgb(72, 72, 72);
+  border: 1px solid rgb(24, 121, 195);
+  border-radius: 1em;
+  font-size: 2em;
+  color: rgb(24, 121, 195);
+}
+
+.header-button:hover {
+  background-color: lightblue;
+}
+
+.starter-button {
+  padding: 2rem;
+  background-color:rgb(72, 72, 72);
+  border: 1px solid rgb(24, 121, 195);
+  border-radius: 1em;
+  font-size: 2em;
+  color: rgb(24, 121, 195);
+}
+
+.starter-button:hover {
+  background-color: lightblue;
+}
+
+.tonic-button {
+  padding: 0.25rem 0em;
+  border: 1px solid gray;
+  width: 3rem;
+}
+
+.mode-button {
+  padding: 0.25rem 0em;
+  border: 1px solid gray;
+  width: 5rem;
+}
+
+.clicked {
+  background-color: lightblue;
+}
+
+.not-clicked {
+  background-color: white;
 }

@@ -1,14 +1,18 @@
 import { useState } from "react";
 import Header from './components/Header';
 import ChordBlock from "./components/ChordBlock";
+import TonicBlock from "./components/TonicBlock";
+import ModeBlock from "./components/ModeBlock";
 import StarterScreen from "./StarterScreen";
 import * as Tone from "tone";
 import './App.css';
 
 function App() {
   let [isRunning, setIsRunning] = useState(true);
-  let [loopLength, setLoopLength] = useState(4);
+  // let [loopLength, setLoopLength] = useState(4);
   let [starterScreen, setStarterScreen] = useState(true);
+  let [tonic, setTonic] = useState('C');
+  let [mode, setMode] = useState("Ionian");
 
   const synth = new Tone.Synth().toDestination();
 
@@ -28,7 +32,7 @@ function App() {
     setStarterScreen(false)
   }
 
-  const loopA = new Tone.Loop(time => {
+  new Tone.Loop(time => {
 	  synth.triggerAttackRelease("C2", "4n", time);
   }, "4n").start(0);
 
@@ -39,6 +43,8 @@ function App() {
         <Header isRunning={isRunning} switchIsRunning={switchIsRunning}/>
         <div id="main">
           <ChordBlock />
+          <TonicBlock tonic={tonic} setTonic={setTonic}  />
+          <ModeBlock mode={mode} setMode={setMode}/>
         </div>
       </div>}
     </div>
