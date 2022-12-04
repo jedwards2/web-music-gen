@@ -16,14 +16,6 @@ function App() {
 
   const synth = new Tone.Synth().toDestination();
 
-  type Scale = {
-
-  }
-
-  type Major = {
-
-  }
-
   const switchIsRunning = () => {
     if (!isRunning){
       Tone.Transport.start()
